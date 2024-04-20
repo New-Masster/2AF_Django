@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Funcionário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .employee-details {
+            margin-top: 30px;
+        }
+        .employee-details img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .employee-details p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Detalhes do Funcionário</h1>
+        <div class="employee-details">
+            <img src="{{ funcionario.foto.url }}" alt="Foto do Funcionário">
+            <p><strong>Nome:</strong> {{ funcionario.nome }}</p>
+            <p><strong>Sobrenome:</strong> {{ funcionario.sobrenome }}</p>
+            <p><strong>CPF:</strong> {{ funcionario.cpf }}</p>
+            <p><strong>Tempo de Serviço:</strong> {{ funcionario.tempo_de_servico }}</p>
+            <p><strong>Ativo:</strong> {% if funcionario.ativo %} Sim {% else %} Não {% endif %}</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2024 Fort Empreedimentos. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
